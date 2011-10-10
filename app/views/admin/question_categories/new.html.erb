@@ -1,0 +1,12 @@
+<%= form_for @question_category, :url => collection_path do |f| %>
+  <%= render "shared/error_messages", :target => f.object %>
+  <fieldset>
+      <%= f.field_container :name do %>
+          <%= f.label :name, t("name") %> <span class="required">*</span><br />
+          <%= f.text_field :name, :class => 'fullwidth title'  %>  
+					<input type="hidden"  name = "question_category[domain_url]" value=<%=current_user.domain_url%> id="question_category_domain_url">
+          <%= f.error_message_on :name %>
+      <% end %>
+      <%= render :partial => 'admin/shared/new_resource_links' %>
+  </fieldset>
+<% end %>
