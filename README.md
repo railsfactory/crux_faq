@@ -39,7 +39,7 @@ Editing FAQs
 =======
 Login to Store Administraton Console
 
-Click on FAQ from configuration
+Click  FAQ 
 
 
 
